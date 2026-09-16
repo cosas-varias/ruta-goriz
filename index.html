@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pradera de Ordesa → Góriz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine: #1E2E24;
+    --pine-deep: #14201A;
+    --stone: #EFE9DC;
+    --stone-line: #D8CFBA;
+    --clay: #BD5B32;
+    --gold: #C8973F;
+    --sage: #7C8E72;
+    --ink: #23291F;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html,body{
+    background: var(--pine-deep);
+  }
+  body{
+    font-family: 'Work Sans', sans-serif;
+    color: var(--ink);
+    display:flex;
+    justify-content:center;
+    padding: 28px 14px;
+  }
+  .card{
+    width: 100%;
+    max-width: 480px;
+    background: var(--stone);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+  }
+
+  /* HERO */
+  .hero{
+    background: linear-gradient(180deg, var(--pine) 0%, var(--pine-deep) 100%);
+    color: var(--stone);
+    padding: 38px 30px 34px;
+    position: relative;
+  }
+  .hero::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 26px;
+    background: var(--stone);
+    clip-path: polygon(0% 100%, 6% 40%, 14% 80%, 22% 30%, 30% 70%, 38% 15%, 46% 60%, 54% 25%, 62% 75%, 70% 35%, 78% 65%, 86% 20%, 94% 55%, 100% 30%, 100% 100%);
+  }
+  .eyebrow{
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  .hero h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.12;
+    margin-bottom: 14px;
+  }
+  .hero p{
+    font-size: 14.5px;
+    color: #C9CFC2;
+    line-height: 1.5;
+    max-width: 34ch;
+  }
+
+  /* STATS STRIP */
+  .stats{
+    display:flex;
+    background: var(--stone);
+    padding: 22px 26px 8px;
+    gap: 18px;
+  }
+  .stat{ flex:1; }
+  .stat .num{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--clay);
+    line-height: 1;
+  }
+  .stat .lbl{
+    font-size: 11.5px;
+    color: #6B6558;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+
+  /* TIMELINE */
+  .timeline{
+    padding: 22px 26px 8px;
+  }
+  .section-title{
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--pine);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--stone-line);
+  }
+  .step{
+    display: flex;
+    gap: 14px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .step:not(:last-child)::before{
+    content:"";
+    position: absolute;
+    left: 21px;
+    top: 34px;
+    bottom: 0;
+    width: 1px;
+    background: var(--stone-line);
+  }
+  .dot{
+    flex-shrink:0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--pine);
+    color: var(--stone);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    text-align:center;
+    line-height: 1.1;
+  }
+  .step.accent .dot{ background: var(--clay); }
+  .step-body{ padding-top: 4px; }
+  .step-time{
+    font-size: 11.5px;
+    color: var(--clay);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 2px;
+  }
+  .step-title{
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .step-desc{
+    font-size: 13px;
+    color: #5F5A4E;
+    line-height: 1.45;
+  }
+
+  /* NOTE */
+  .note{
+    margin: 4px 26px 26px;
+    background: #E3DCC9;
+    border-left: 3px solid var(--gold);
+    padding: 14px 16px;
+    font-size: 12.5px;
+    color: #55503F;
+    line-height: 1.5;
+    border-radius: 2px;
+  }
+  .note b{ color: var(--ink); }
+
+  .footer{
+    text-align:center;
+    padding: 4px 20px 26px;
+    font-size: 11px;
+    color: #9A927D;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="eyebrow">Parque Nacional de Ordesa y Monte Perdido</div>
+      <h1>Pradera de Ordesa → Refugio de Góriz</h1>
+      <p>Subida por la Senda de los Cazadores, bajada por el valle. Salida desde Binéfar.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">13 km</div><div class="lbl">distancia total</div></div>
+      <div class="stat"><div class="num">+1.200 m</div><div class="lbl">desnivel positivo</div></div>
+      <div class="stat"><div class="num">6–7 h</div><div class="lbl">duración con paradas</div></div>
+    </div>
+
+    <div class="timeline">
+      <div class="section-title">Horario del día</div>
+
+      <div class="step accent">
+        <div class="dot">6:00</div>
+        <div class="step-body">
+          <div class="step-time">SALIDA</div>
+          <div class="step-title">Salida de Binéfar</div>
+          <div class="step-desc">Trayecto de unos 2h 15min hasta la Pradera de Ordesa.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="dot">8:15</div>
+        <div class="step-body">
+          <div class="step-time">LLEGADA</div>
+          <div class="step-title">Parking de la Pradera</div>
+          <div class="step-desc">Acceso directo en coche particular, sin bus.</div>
+        </div>
+      </div>
+
+      <div class="step accent">
+        <div class="dot">8:30</div>
+        <div class="step-body">
+          <div class="step-time">INICIO</div>
+          <div class="step-title">Comienza la subida</div>
+          <div class="step-desc">Senda de los Cazadores / Faja de Pelay hasta Góriz — 3 a 3,5 h.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="dot">~12h</div>
+        <div class="step-body">
+          <div class="step-time">PUNTO ALTO</div>
+          <div class="step-title">Refugio de Góriz</div>
+          <div class="step-desc">Descanso, comida y vistas antes de bajar por el valle.</div>
+        </div>
+      </div>
+
+      <div class="step accent">
+        <div class="dot">2,5 h</div>
+        <div class="step-body">
+          <div class="step-time">BAJADA</div>
+          <div class="step-title">Regreso por el valle</div>
+          <div class="step-desc">Cola de Caballo — Gradas de Soaso — Pradera.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="dot">15–16h</div>
+        <div class="step-body">
+          <div class="step-time">FIN</div>
+          <div class="step-title">Llegada a la Pradera</div>
+          <div class="step-desc">Margen amplio antes del atardecer (~20:15 h).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Antes de salir:</b> si vais en fin de semana a partir del 25 de septiembre, comprobad si el bus obligatorio de Torla está activo ese día.
+    </div>
+
+    <div class="footer">RUTA CIRCULAR · SENDA DE LOS CAZADORES</div>
+  </div>
+</body>
+</html>
